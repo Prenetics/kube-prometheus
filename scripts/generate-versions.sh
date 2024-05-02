@@ -34,8 +34,8 @@ get_version() {
   fi
 
   # Use higher version from new version and current version
-  v=$(printf '%s\n' "$v" "$cv" | sort -r | head -n1)
-  
+  v=$(printf '%s\n' "$v" "$cv" | sort -V -r | head -n1)
+
   echo "$v"
 }
 
@@ -66,6 +66,6 @@ cat <<-EOF
   "prometheusOperator": "$(get_version "prometheus-operator/prometheus-operator")",
   "kubeRbacProxy": "$(get_version "brancz/kube-rbac-proxy")",
   "configmapReload": "$(get_version "jimmidyson/configmap-reload")",
-  "pyrra": "$(get_version "pyrra-dev/pyrra")"
+  "pyrra": "0.6.4"
 }
 EOF

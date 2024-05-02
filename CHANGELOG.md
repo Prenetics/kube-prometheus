@@ -1,3 +1,34 @@
+## release-0.13 / 2023-08-31
+
+* [CHANGE] Added a AKS platform to `platforms.libsonnet` [#1997](https://github.com/prometheus-operator/kube-prometheus/pull/1997)
+* [CHANGE] Disable btrfs collector by default [#2074](https://github.com/prometheus-operator/kube-prometheus/pull/2074)
+* [CHANGE] Enable Multi Cluster alerts by default [#2099](https://github.com/prometheus-operator/kube-prometheus/pull/2099)
+* [FEATURE] Create dedicated Service to expose CoreDNS metric [#2107](https://github.com/prometheus-operator/kube-prometheus/pull/2107)
+* [FEATURE] Add Windows support using Hostprocess instead of static_configs [#2048](https://github.com/prometheus-operator/kube-prometheus/pull/2048)
+* [BUGFIX] Fix a compilation error when building the custom-metrics addon [#1996](https://github.com/prometheus-operator/kube-prometheus/pull/1996)
+* [BUGFIX] Add `prometheus-adapter` in Prometheus's NetworkPolicy [#1982](https://github.com/prometheus-operator/kube-prometheus/pull/1982)
+* [BUGFIX] Fix namespace specified in manifest non-namespaced resources [#2158](https://github.com/prometheus-operator/kube-prometheus/pull/2158)
+* [BUGFIX] Override ServiceAccount, Role and ClusterRole names in RoleBinding and ClusterRoleBinding [#2135](https://github.com/prometheus-operator/kube-prometheus/pull/2135)
+* [BUGFIX] Remove deprecated `--logtostderr` argument of prometheus-adapter [#2185](https://github.com/prometheus-operator/kube-prometheus/pull/2185)
+* [BUGFIX] Fix alertmanager external config example [#1891](https://github.com/prometheus-operator/kube-prometheus/pull/1891)
+* [ENHANCEMENT] Add startupProbe to prometheus-adapter [#2029](https://github.com/prometheus-operator/kube-prometheus/pull/2029)
+* [ENHANCEMENT] Added configurable default values for kube-rbac-proxy in prometheus-operator, node-exporter and blackbox-exporter [#1987](https://github.com/prometheus-operator/kube-prometheus/pull/1987)
+* [ENHANCEMENT] Modify control plane ServiceMonitors to be compatible with Argo [#2041](https://github.com/prometheus-operator/kube-prometheus/pull/2041)
+* [ENHANCEMENT] Add md5 hash of the ConfigMap in Prometheus Adapter Deployment Annotations to force its recreation [#2195](https://github.com/prometheus-operator/kube-prometheus/pull/2195)
+
+## release-0.12 / 2023-01-19
+
+* [CHANGE] Updates Prometheus Adapater version to 0.10.0 [#1865](https://github.com/prometheus-operator/kube-prometheus/pull/1865)
+* [FEATURE] Added a AKS platform [#1869](https://github.com/prometheus-operator/kube-prometheus/pull/1869)
+* [BUGFIX] Update Pyrra to 0.4.2 [#1800](https://github.com/prometheus-operator/kube-prometheus/pull/1800)
+* [BUGFIX] Jsonnet: enable automountServiceAccountToken for prometheus service account [#1808](https://github.com/prometheus-operator/kube-prometheus/pull/1808)
+* [BUGFIX] Fix diskDeviceSelector regex for aks and eks [#1810](https://github.com/prometheus-operator/kube-prometheus/pull/1810)
+* [BUGFIX] Set path.udev.data Argument of Node Exporter [#1913](https://github.com/prometheus-operator/kube-prometheus/pull/1913)
+* [BUGFIX] Include RAID device md.* in disk seletor [#1945](https://github.com/prometheus-operator/kube-prometheus/pull/1945)
+* [ENHANCEMENT] Prometheus-adapter: add prefix option to config for container metrics [#1844](https://github.com/prometheus-operator/kube-prometheus/pull/1844)
+* [ENHANCEMENT] Switch kube-state-metrics registry to registry.k8s.io [#1914](https://github.com/prometheus-operator/kube-prometheus/pull/1914)
+* [ENHANCEMENT] Node Exporter: add parameter for ignored network devices [#1887](https://github.com/prometheus-operator/kube-prometheus/pull/1887)
+
 ## release-0.11 / 2022-06-15
 
 * [CHANGE] Disable injecting unnecessary variables allowing access to k8s API [#1591](https://github.com/prometheus-operator/kube-prometheus/pull/1591)
